@@ -1,0 +1,4 @@
+AC_INIT([Sci fair 2014 ZJS],[1.0.0],[Znet])
+AC_PROG_CC
+AM_INIT_AUTOMAKE
+AC_OUTPUT(Makefile) 
