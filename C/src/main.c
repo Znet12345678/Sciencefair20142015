@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
+//Copyright (C) Zachary James Schlotman 2014-2015
 static void o (GtkWidget *widget,gpointer data)
 {
 	g_print("1");
