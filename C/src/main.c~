@@ -1,0 +1,364 @@
+#include <stdio.h>
+#include <gtk/gtk.h>
+//Copyright (C) Zachary James Schlotman 2014-2015
+static void o (GtkWidget *widget,gpointer data)
+{
+	g_print("1");
+}
+static void t (GtkWidget *widget,gpointer data)
+{
+        g_print("2");
+}
+
+static void th (GtkWidget *widget,gpointer data)
+{
+        g_print("3");
+}
+
+static void f (GtkWidget *widget,gpointer data)
+{
+        g_print("4");
+}
+
+static void fi (GtkWidget *widget,gpointer data)
+{
+        g_print("5");
+}
+
+static void s (GtkWidget *widget,gpointer data)
+{
+        g_print("6");
+}
+
+static void se (GtkWidget *widget,gpointer data)
+{
+        g_print("7");
+}
+
+static void e (GtkWidget *widget,gpointer data)
+{
+        g_print("8");
+}
+
+static void n (GtkWidget *widget,gpointer data)
+{
+        g_print("9");
+}
+
+static void z (GtkWidget *widget,gpointer data)
+{
+        g_print("0");
+}
+static gboolean delev( GtkWidget *widget, GdkEvent *ev,gpointer data )
+{
+	g_print ("");
+	return FALSE;
+}
+static void mquit( GtkWidget *widget, gpointer data )
+{
+	gtk_main_quit();
+}
+gint spacing = 0;
+gboolean homogeneous = TRUE;
+gboolean expand = TRUE;
+gboolean fill = TRUE;
+guint padding = 0;
+int main(int argc, char ** argv)
+{
+	GtkWidget *event_box;
+	GtkWidget *row1;
+	GtkWidget *row2;
+	GtkWidget *row3;
+	GtkWidget *row4;
+	GtkWidget *win;
+	GtkWidget *o1;
+	GtkWidget *t1;
+	GtkWidget *th1;
+	GtkWidget *f1;
+	GtkWidget *fi1;
+	GtkWidget *s1;
+	GtkWidget *se1;
+	GtkWidget *e1;
+	GtkWidget *n1;
+	GtkWidget *z1;
+	GtkWidget *separator;
+	GtkLayout *layout;
+/*
+	gtk_container_add (GTK_WIDGET(event_box),o1);
+	gtk_container_add (GTK_WIDGET(event_box),t1);
+        gtk_container_add (GTK_CONTAINER(event_box),t1);
+        gtk_container_add (GTK_CONTAINER(event_box),th1);
+	separator = gtk_hseparator_new();
+        gtk_container_add (GTK_CONTAINER(event_box),f1);
+        gtk_container_add (GTK_CONTAINER(event_box),fi1);
+        gtk_container_add (GTK_CONTAINER(event_box),s1);
+        separator = gtk_hseparator_new();
+	gtk_container_add (GTK_CONTAINER(event_box),se1);
+        gtk_container_add (GTK_CONTAINER(event_box),e1);
+        gtk_container_add (GTK_CONTAINER(event_box),n1);
+  	separator = gtk_hseparator_new();
+	gtk_container_add (GTK_CONTAINER(event_box),z1);
+	gtk_container_add (GTK_CONTAINER(win),event_box);
+
+	gtk_box_pack_start (GTK_BOX(event_box),o1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),t1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),th1,TRUE,TRUE,0 );
+	separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),f1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),fi1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),s1,TRUE,TRUE,0 );
+	separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),se1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),e1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),n1,TRUE,TRUE,0 );
+	separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),z1,TRUE,TRUE,0 );
+
+
+//	separator = gtk_hseparato_new()
+	gtk_widget_show(event_box);
+*/
+
+	gtk_init(&argc,&argv);
+
+	event_box = gtk_hbox_new (FALSE,0);
+//	row1 = gtk_vbox_new (FALSE,0);
+/* 
+  gtk_box_pack_start (GTK_BOX(event_box),o1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),t1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),th1,TRUE,TRUE,0 );
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),f1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),fi1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),s1,TRUE,TRUE,0 );
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),se1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),e1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),n1,TRUE,TRUE,0 );
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),z1,TRUE,TRUE,0 );
+*/
+
+//      separator = gtk_hseparato_new()
+        gtk_widget_show(event_box);
+	row1 = gtk_hbox_new(homogeneous,spacing);
+	row2 = gtk_hbox_new (homogeneous,spacing);
+	row3 = gtk_hbox_new(homogeneous,spacing);
+	row4 = gtk_hbox_new(homogeneous,spacing);
+	layout = gtk_layout_new(NULL,NULL);
+	win = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+	g_signal_connect (win,"delev",G_CALLBACK(delev),NULL);
+	g_signal_connect(win,"mquit",G_CALLBACK (mquit),NULL);
+	gtk_container_set_border_width (GTK_CONTAINER (win),10);
+	o1 = gtk_button_new_with_label("1");
+	t1 = gtk_button_new_with_label("2");
+	th1 = gtk_button_new_with_label("3");
+	f1 = gtk_button_new_with_label("4");
+	fi1 = gtk_button_new_with_label("5");
+	s1 = gtk_button_new_with_label("6");
+	se1 = gtk_button_new_with_label("7");
+	e1 = gtk_button_new_with_label("8");
+	n1 = gtk_button_new_with_label("9");
+	z1 = gtk_button_new_with_label("0");
+	g_signal_connect (o1,"clicked",G_CALLBACK(o),NULL);
+	g_signal_connect (t1,"clicked",G_CALLBACK(t),NULL);
+        g_signal_connect (th1,"clicked",G_CALLBACK(th),NULL);
+	g_signal_connect (f1,"clicked",G_CALLBACK(f),NULL);
+        g_signal_connect (fi1,"clicked",G_CALLBACK(fi),NULL);
+        g_signal_connect (s1,"clicked",G_CALLBACK(s),NULL);
+        g_signal_connect (se1,"clicked",G_CALLBACK(se),NULL);
+        g_signal_connect (e1,"clicked",G_CALLBACK(e),NULL);
+        g_signal_connect (n1,"clicked",G_CALLBACK(n),NULL);
+        g_signal_connect (z1,"clicked",G_CALLBACK(z),NULL);
+/*
+   gtk_box_pack_start (GTK_BOX(event_box),o1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),t1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),th1,TRUE,TRUE,0 );
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),f1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),fi1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),s1,TRUE,TRUE,0 );
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),se1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),e1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),n1,TRUE,TRUE,0 );
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),z1,TRUE,TRUE,0 );
+*/
+
+//      separator = gtk_hseparato_new()
+//        gtk_widget_show(event_box);
+
+/*
+	gtk_container_add(GTK_CONTAINER(win),o1);
+	gtk_container_add(GTK_CONTAINER(win),t1);
+        gtk_container_add(GTK_CONTAINER(win),th1);
+       gtk_container_add(GTK_CONTAINER(win),f1);
+	gtk_container_add(GTK_CONTAINER(win),fi1);
+        gtk_container_add(GTK_CONTAINER(win),s1);
+        gtk_container_add(GTK_CONTAINER(win),se1);
+        gtk_container_add(GTK_CONTAINER(win),e1);
+        gtk_container_add(GTK_CONTAINER(win),n1);
+        gtk_container_add(GTK_CONTAINER(win),z1);
+*/
+//        gtk_container_add(GTK_CONTAINER(win),event_box);
+/*	gtk_container_add (GTK_CONTAINER(event_box),o1);
+        gtk_container_add (GTK_CONTAINER(event_box),t1);
+    //    gtk_container_add (GTK_CONTAINER(row1),t1);
+        gtk_container_add (GTK_CONTAINER(row1),th1);
+        gtk_container_add (GTK_CONTAINER(row2),f1);
+        gtk_container_add (GTK_CONTAINER(row2),fi1);
+        gtk_container_add (GTK_CONTAINER(row2),s1);
+        gtk_container_add (GTK_CONTAINER(row3),se1);
+        gtk_container_add (GTK_CONTAINER(row3),e1);
+        gtk_container_add (GTK_CONTAINER(row3),n1);
+        gtk_container_add (GTK_CONTAINER(row4),z1);
+	gtk_container_add(GTK_CONTAINER(win),event_box);
+	gtk_container_add(GTK_CONTAINER(win),row1);
+	gtk_container_add(GTK_CONTAINER(win),row2);
+	gtk_container_add(GTK_CONTAINER(win),row3);
+	gtk_container_add(GTK_CONTAINER(win),row4);
+	gtk_container_add(GTK_CONTAINER(win),layout);
+*/
+	gtk_widget_set_size_request(GTK_WIDGET(o1),50,50);
+        gtk_widget_set_size_request(t1,50,50);
+        gtk_widget_set_size_request(th1,50,50);
+        gtk_widget_set_size_request(f1,50,50);
+        gtk_widget_set_size_request(fi1,50,50);
+        gtk_widget_set_size_request(s1,50,50);
+        gtk_widget_set_size_request(se1,50,50);
+        gtk_widget_set_size_request(e1,50,50);
+        gtk_widget_set_size_request(n1,50,50);
+        gtk_widget_set_size_request(z1,50,50);
+//	gtk_layout_set_size_request(o1,50,50);
+	      gtk_container_add (GTK_BOX(row1),o1);
+//        gtk_container_add (GTK_WIDGET(row1),t1);
+
+/*
+        gtk_container_add (GTK_BOX(row1),t1);
+        gtk_container_add (GTK_BOX(row1),th1);
+        separator = gtk_hseparator_new();
+        gtk_container_add (GTK_BOX(row2),f1);
+        gtk_container_add (GTK_BOX(row2),fi1);
+        gtk_container_add (GTK_BOX(row2),s1);
+        separator = gtk_hseparator_new();
+        gtk_container_add (GTK_BOX(row3),se1);
+        gtk_container_add (GTK_BOX(row3),e1);
+        gtk_container_add (GTK_BOX(row3),n1);
+        separator = gtk_hseparator_new();
+        gtk_container_add (GTK_CONTAINER(row4),z1);
+        gtk_container_add (GTK_CONTAINER(win),event_box);
+*/
+/*
+      gtk_container_add (GTK_WIDGET(row1,o1);
+        gtk_container_add (GTK_WIDGET(row1),t1);
+        gtk_container_add (GTK_CONTAINER(row1),t1);
+        gtk_container_add (GTK_CONTAINER(event_box),th1);
+        separator = gtk_hseparator_new();
+        gtk_container_add (GTK_CONTAINER(event_box),f1);
+        gtk_container_add (GTK_CONTAINER(event_box),fi1);
+        gtk_container_add (GTK_CONTAINER(event_box),s1);
+        separator = gtk_hseparator_new();
+        gtk_container_add (GTK_CONTAINER(event_box),se1);
+        gtk_container_add (GTK_CONTAINER(event_box),e1);
+        gtk_container_add (GTK_CONTAINER(event_box),n1);
+        separator = gtk_hseparator_new();
+        gtk_container_add (GTK_CONTAINER(event_box),z1);
+        gtk_container_add (GTK_CONTAINER(win),event_box);
+*/
+   gtk_box_pack_start (GTK_BOX(row1),o1, expand, fill, padding );
+ gtk_box_pack_end (GTK_BOX(row1),o1,TRUE,TRUE,0);
+ 
+       gtk_box_pack_start (GTK_BOX(row1),t1, expand, fill, padding );
+        gtk_box_pack_end (GTK_BOX(row1),th1,TRUE,TRUE,0);
+//	gtk_box_pack_start (GTK_BOX(row1),th1, expand, fill, padding );
+//	 gtk_box_pack_end (GTK_BOX(row1),th1,TRUE,TRUE,0);
+
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(row2),f1, expand, fill, padding);
+ gtk_box_pack_end (GTK_BOX(row1),fi1,TRUE,TRUE,0);
+
+//        gtk_box_pack_start (GTK_BOX(row2),fi1, expand, fill, padding );
+ gtk_box_pack_end (GTK_BOX(row1),s1,TRUE,TRUE,0);
+
+
+        gtk_box_pack_start (GTK_BOX(row2),se1, expand, fill, padding );
+ gtk_box_pack_end (GTK_BOX(row1),e1,TRUE,TRUE,0);
+
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(row3),n1, expand, fill, padding );
+ gtk_box_pack_end (GTK_BOX(row1),z1,TRUE,TRUE,0);
+
+ //       gtk_box_pack_start (GTK_BOX(row3),e1, expand, fill, padding);
+// gtk_box_pack_end (GTK_BOX(row1),e1,TRUE,TRUE,0);
+
+  //      gtk_box_pack_start (GTK_BOX(row3),n1, expand, fill, padding);
+// gtk_box_pack_end (GTK_BOX(row1),n1,TRUE,TRUE,0);
+
+  //      separator = gtk_hseparator_new();
+
+    //    gtk_box_pack_start (GTK_BOX(row4),z1, expand, fill, padding);
+// gtk_box_pack_end (GTK_BOX(row1),z1,TRUE,TRUE,0);
+
+
+
+   	gtk_widget_show(row1);
+	gtk_widget_show(row2);
+	gtk_widget_show(row3);
+	gtk_widget_show(row4);
+	gtk_widget_show(layout);
+
+
+
+
+
+
+
+
+
+	gtk_widget_show(o1);
+        gtk_widget_show(t1);
+        gtk_widget_show(th1);
+        gtk_widget_show(f1);
+        gtk_widget_show(fi1);
+        gtk_widget_show(s1);
+        gtk_widget_show(se1);
+        gtk_widget_show(e1);
+        gtk_widget_show(n1);
+        gtk_widget_show(z1);
+   gtk_box_pack_start (GTK_BOX(event_box),o1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),t1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),th1,TRUE,TRUE,0 );
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),f1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),fi1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),s1,TRUE,TRUE,0 );
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),se1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),e1,TRUE,TRUE,0 );
+        gtk_box_pack_start (GTK_BOX(event_box),n1,TRUE,TRUE,0 );
+        separator = gtk_hseparator_new();
+
+        gtk_box_pack_start (GTK_BOX(event_box),z1,TRUE,TRUE,0 );
+
+
+//      separator = gtk_hseparato_new()
+        gtk_widget_show(event_box);
+
+	gtk_widget_show(win);
+	gtk_main();
+	return 0;
+}

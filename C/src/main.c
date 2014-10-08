@@ -72,6 +72,7 @@ int main(int argc, char ** argv)
 	GtkWidget *e1;
 	GtkWidget *n1;
 	GtkWidget *z1;
+	GtkWidget *fixed;
 	gtk_init(&argc,&argv);
 	win = gtk_window_new (GTK_WINDOW_TOPLEVEL);
 	g_signal_connect (win,"delev",G_CALLBACK(delev),NULL);
@@ -87,6 +88,7 @@ int main(int argc, char ** argv)
 	e1 = gtk_button_new_with_label("8");
 	n1 = gtk_button_new_with_label("9");
 	z1 = gtk_button_new_with_label("0");
+	fixed = gtk_fixed_new();
 	g_signal_connect (o1,"clicked",G_CALLBACK(o),NULL);
 	g_signal_connect (t1,"clicked",G_CALLBACK(t),NULL);
         g_signal_connect (th1,"clicked",G_CALLBACK(th),NULL);
@@ -97,6 +99,8 @@ int main(int argc, char ** argv)
         g_signal_connect (e1,"clicked",G_CALLBACK(e),NULL);
         g_signal_connect (n1,"clicked",G_CALLBACK(n),NULL);
         g_signal_connect (z1,"clicked",G_CALLBACK(z),NULL);
+	gtk_window_set_default_size(GTK_WINDOW(win),200,500);
+/*
 	gtk_container_add(GTK_CONTAINER(win),o1);
 	gtk_container_add(GTK_CONTAINER(win),t1);
         gtk_container_add(GTK_CONTAINER(win),th1);
@@ -107,16 +111,30 @@ int main(int argc, char ** argv)
         gtk_container_add(GTK_CONTAINER(win),e1);
         gtk_container_add(GTK_CONTAINER(win),n1);
         gtk_container_add(GTK_CONTAINER(win),z1);
-        
+*/
+        gtk_fixed_put(GTK_FIXED(fixed),o1,0,0);
+	gtk_container_add(GTK_CONTAINER(win),fixed);
+	gtk_widget_set_size_request(o1,50,50);
+	gtk_fixed_put(GTK_FIXED(fixed),t1,55,0);
+	gtk_widget_set_size_request(t1,50,50);
+	gtk_fixed_put(GTK_FIXED(fixed),th1,110,0);
+	gtk_widget_set_size_request(th1,50,50);
+	gtk_fixed_put(GTK_FIXED(fixed),f1,0,55);
+	gtk_widget_set_size_request(f1,50,50);
+	gtk_fixed_put(GTK_FIXED(fixed),fi1,55,55);
+	gtk_widget_set_size_request(fi1,50,50);
+	gtk_fixed_put(GTK_FIXED(fixed),s1,110,55);
+	gtk_widget_set_size_request(s1,50,50);
+	gtk_fixed_put(GTK_FIXED(fixed),se1,0,110);
+	gtk_widget_set_size_request(se1,50,50);
+	gtk_fixed_put(GTK_FIXED(fixed),e1,55,110);
+	gtk_widget_set_size_request(e1,50,50);
+	gtk_fixed_put(GTK_FIXED(fixed),n1,110,110);
+	gtk_widget_set_size_request(n1,50,50);
+	gtk_fixed_put(GTK_FIXED(fixed),z1,55,165);
+	gtk_widget_set_size_request(z1,50,50);
 
-
-
-
-
-
-
-
-
+	gtk_widget_show(fixed);
 	gtk_widget_show(o1);
         gtk_widget_show(t1);
         gtk_widget_show(th1);
