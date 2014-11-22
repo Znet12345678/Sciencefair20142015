@@ -13,6 +13,33 @@ main.o: src/main.c /usr/local/include/stdc-predef.h \
  /usr/local/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/local/include/x86_64-linux-gnu/bits/sys_errlist.h \
  /usr/local/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/local/include/stdlib.h \
+ /usr/local/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/local/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/local/include/endian.h \
+ /usr/local/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/local/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/local/include/x86_64-linux-gnu/bits/byteswap-16.h \
+ /usr/local/include/x86_64-linux-gnu/sys/types.h \
+ /usr/local/include/time.h \
+ /usr/local/include/x86_64-linux-gnu/sys/select.h \
+ /usr/local/include/x86_64-linux-gnu/bits/select.h \
+ /usr/local/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/local/include/x86_64-linux-gnu/bits/time.h \
+ /usr/local/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/local/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/local/include/alloca.h \
+ /usr/local/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/local/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/local/include/math.h \
+ /usr/local/include/x86_64-linux-gnu/bits/huge_val.h \
+ /usr/local/include/x86_64-linux-gnu/bits/huge_valf.h \
+ /usr/local/include/x86_64-linux-gnu/bits/huge_vall.h \
+ /usr/local/include/x86_64-linux-gnu/bits/inf.h \
+ /usr/local/include/x86_64-linux-gnu/bits/nan.h \
+ /usr/local/include/x86_64-linux-gnu/bits/mathdef.h \
+ /usr/local/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/local/include/x86_64-linux-gnu/bits/mathinline.h \
  /usr/include/gtk-2.0/gtk/gtk.h /usr/include/gtk-2.0/gdk/gdk.h \
  /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h \
  /usr/include/glib-2.0/gio/gio.h /usr/include/glib-2.0/gio/giotypes.h \
@@ -27,22 +54,19 @@ main.o: src/main.c /usr/local/include/stdc-predef.h \
  /usr/local/include/linux/limits.h \
  /usr/local/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/local/lib/gcc/x86_64-unknown-linux-gnu/4.8.1/include/float.h \
- /usr/include/glib-2.0/glib/gversionmacros.h /usr/local/include/time.h \
- /usr/local/include/x86_64-linux-gnu/bits/time.h \
- /usr/local/include/xlocale.h /usr/include/glib-2.0/glib/garray.h \
+ /usr/include/glib-2.0/glib/gversionmacros.h /usr/local/include/xlocale.h \
+ /usr/include/glib-2.0/glib/garray.h \
  /usr/include/glib-2.0/glib/gasyncqueue.h \
  /usr/include/glib-2.0/glib/gthread.h \
  /usr/include/glib-2.0/glib/gatomic.h /usr/include/glib-2.0/glib/gerror.h \
  /usr/include/glib-2.0/glib/gquark.h \
  /usr/include/glib-2.0/glib/gbacktrace.h /usr/local/include/signal.h \
- /usr/local/include/x86_64-linux-gnu/bits/sigset.h \
  /usr/local/include/x86_64-linux-gnu/bits/signum.h \
  /usr/local/include/x86_64-linux-gnu/bits/siginfo.h \
  /usr/local/include/x86_64-linux-gnu/bits/sigaction.h \
  /usr/local/include/x86_64-linux-gnu/bits/sigcontext.h \
  /usr/local/include/x86_64-linux-gnu/bits/sigstack.h \
  /usr/local/include/x86_64-linux-gnu/sys/ucontext.h \
- /usr/local/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/local/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/glib-2.0/glib/gbase64.h \
  /usr/include/glib-2.0/glib/gbitlock.h \
@@ -99,14 +123,6 @@ main.o: src/main.c /usr/local/include/stdc-predef.h \
  /usr/include/glib-2.0/glib/deprecated/gmain.h \
  /usr/include/glib-2.0/glib/deprecated/grel.h \
  /usr/include/glib-2.0/glib/deprecated/gthread.h \
- /usr/local/include/x86_64-linux-gnu/sys/types.h \
- /usr/local/include/endian.h \
- /usr/local/include/x86_64-linux-gnu/bits/endian.h \
- /usr/local/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/local/include/x86_64-linux-gnu/bits/byteswap-16.h \
- /usr/local/include/x86_64-linux-gnu/sys/select.h \
- /usr/local/include/x86_64-linux-gnu/bits/select.h \
- /usr/local/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/local/include/pthread.h /usr/local/include/sched.h \
  /usr/local/include/x86_64-linux-gnu/bits/sched.h \
  /usr/local/include/x86_64-linux-gnu/bits/setjmp.h \
@@ -578,6 +594,60 @@ main.o: src/main.c /usr/local/include/stdc-predef.h \
 
 /usr/local/include/x86_64-linux-gnu/bits/stdio.h:
 
+/usr/local/include/stdlib.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/local/include/endian.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/local/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/local/include/time.h:
+
+/usr/local/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/local/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/local/include/alloca.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/local/include/math.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/huge_val.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/huge_valf.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/huge_vall.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/inf.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/nan.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/mathdef.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/local/include/x86_64-linux-gnu/bits/mathinline.h:
+
 /usr/include/gtk-2.0/gtk/gtk.h:
 
 /usr/include/gtk-2.0/gdk/gdk.h:
@@ -620,10 +690,6 @@ main.o: src/main.c /usr/local/include/stdc-predef.h \
 
 /usr/include/glib-2.0/glib/gversionmacros.h:
 
-/usr/local/include/time.h:
-
-/usr/local/include/x86_64-linux-gnu/bits/time.h:
-
 /usr/local/include/xlocale.h:
 
 /usr/include/glib-2.0/glib/garray.h:
@@ -642,8 +708,6 @@ main.o: src/main.c /usr/local/include/stdc-predef.h \
 
 /usr/local/include/signal.h:
 
-/usr/local/include/x86_64-linux-gnu/bits/sigset.h:
-
 /usr/local/include/x86_64-linux-gnu/bits/signum.h:
 
 /usr/local/include/x86_64-linux-gnu/bits/siginfo.h:
@@ -655,8 +719,6 @@ main.o: src/main.c /usr/local/include/stdc-predef.h \
 /usr/local/include/x86_64-linux-gnu/bits/sigstack.h:
 
 /usr/local/include/x86_64-linux-gnu/sys/ucontext.h:
-
-/usr/local/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/local/include/x86_64-linux-gnu/bits/sigthread.h:
 
@@ -789,22 +851,6 @@ main.o: src/main.c /usr/local/include/stdc-predef.h \
 /usr/include/glib-2.0/glib/deprecated/grel.h:
 
 /usr/include/glib-2.0/glib/deprecated/gthread.h:
-
-/usr/local/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/local/include/endian.h:
-
-/usr/local/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/local/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/local/include/x86_64-linux-gnu/bits/byteswap-16.h:
-
-/usr/local/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/local/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/local/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/local/include/pthread.h:
 

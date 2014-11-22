@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <Foundation/Foundation.h>
+#include <AppKit/NSApplication.h>
+#include <AppKit/NSWindow.h>
+@interface delegate : NSObject
+{
+  NSWindow *calwin;
+}
+- (void) win;
+- (void) applicationWillFinishLaunching: (NSNotification *)not;
+- (void) applicationDidFinishLaunching: (NSNotification *)not;
+@end
+
+@implementation delegate
+- (void) win
+{
+NSButton *one;
+
+one = AUTORELEASE ([NSButton new]);
+[one setTitle: @"1"];
+[one sizeToFit];
+[one setTarget: self];
+[one setAction: @selector (onef:)];
+        NSRect rect = NSMakeRect (500, 500, 500, 500);
+        calwin = [NSWindow alloc];
+        unsigned int styleMask = NSTitledWindowMask
+                         | NSMiniaturizableWindowMask;
+        unsigned int windowMask = NSTitledWindowMask
+                          | NSClosableWindowMask
+                          | NSMiniaturizableWindowMask;
+	calwin = [calwin initWithContentRect: rect
+                     styleMask: windowMask
+                     backing: NSBackingStoreBuffered
+                     defer: NO];
+        [calwin setTitle:@"calculator"];
+
+}
+- (void) onef
+{
+}
+- (void) applicationWillFinishLaunching: (NSNotification *)not
+{
+  [self createWindow];
+}
+
+- (void) applicationDidFinishLaunching: (NSNotification *)not;
+{
+  [calwin makeKeyAndOrderFront: nil];
+}
+@end
+int main(int argv,char argc)
+{
+
+	[NSApplication sharedApplication];
+	[NSApp setDelegate: [delegate new]];
+	
+	return NSApplicationMain (argc, argv);
+//	printf("\n");
+}

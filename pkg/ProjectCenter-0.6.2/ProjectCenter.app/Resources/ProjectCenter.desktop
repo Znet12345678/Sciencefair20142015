@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Categories=X-GNUstep;
+Name=ProjectCenter
+Comment=GNUstep Integrated Development Environment
+Icon=/usr/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter.tiff
+Exec=/usr/local/bin/openapp ProjectCenter
+FilePattern=ProjectCenter.app;ProjectCenter;
+MimeType=

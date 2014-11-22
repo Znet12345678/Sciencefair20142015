@@ -33,8 +33,6 @@ PATH: /usr/sbin
 PATH: /usr/bin
 PATH: /sbin
 PATH: /bin
-PATH: /usr/games
-PATH: /usr/local/games
 
 
 ## ----------- ##
@@ -256,7 +254,7 @@ host_alias=''
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /root/install-sh'
+install_sh='${SHELL} /home/znet/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'

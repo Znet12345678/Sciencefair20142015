@@ -1,0 +1,11 @@
+{
+   ApplicationDescription = "cal";
+   ApplicationIcon = "";
+   ApplicationName = cal;
+   ApplicationRelease = 0.1;
+   Authors = "";
+   Copyright = "";
+   CopyrightDescription = "";
+   FullVersionID = 0.1;
+   URL = "";
+}

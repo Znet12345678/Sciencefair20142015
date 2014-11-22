@@ -25,6 +25,17 @@ private:
       QPushButton *eight;
       QPushButton *nine;
       QPushButton *zero;
+      QPushButton *add;
+      QPushButton *sub;
+      QPushButton *mult;
+      QPushButton *div;
+      QPushButton *equ;
+       QString num1;
+       QString num2;
+      bool badd;
+      bool bsub;
+      bool bmult;
+      bool bdiv;
 private slots:
   void onefunc();
   void twofunc();
@@ -36,6 +47,11 @@ void sevenfunc();
 void eightfunc();
 void ninefunc();
 void zerofunc();
+void addf();
+void subf();
+void multf();
+void divf();
+void equf();
 };
 
 
